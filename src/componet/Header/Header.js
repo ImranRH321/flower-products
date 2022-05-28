@@ -1,13 +1,14 @@
 import React from 'react';
-import CustomLink from '../CustomLink/CustomLink';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
-            <h2>the page is Header</h2>
-            <nav>
-                <CustomLink to="/home">Home</CustomLink>
-                <CustomLink to="/flowers">Flowers</CustomLink>
+        <div className='bg-green-300 p-4'>
+            <nav >
+                <NavLink className="text-2xl mx-4 hover:bg-sky-700" to="/home">Home</NavLink>
+                <NavLink className="text-2xl mx-4 hover:bg-sky-700" to="/flowers">Flowers</NavLink>
+                <NavLink className="text-2xl mx-4 hover:bg-sky-700" to="/about">About</NavLink>
+                <NavLink className="text-2xl mx-4 hover:bg-sky-700" to="/Services">Services</NavLink>
             </nav>
         </div>
     );

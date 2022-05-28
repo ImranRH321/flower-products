@@ -4,14 +4,14 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 function CustomLink({ children, to, ...props }) {
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname, end: true });
-  const amkeStyle = {
-      fontSize:'30px'
+  const size = {
+        fontSize: '20px'
   }
     return (
       <div>
         <Link
-         
-          style={{ textDecoration: match ? "underline" : "none" }}
+          
+          style={{ textDecoration: match ? size : "none" }}
           to={to}
           {...props}
         >
