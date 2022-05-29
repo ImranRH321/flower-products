@@ -1,0 +1,17 @@
+.detail{
+    border: 2px solid green;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detail img{
+   width: 400px;
+
+}
+.detail_item{
+    border: 2px solid red;
+   padding: 60px 0;
+}
+

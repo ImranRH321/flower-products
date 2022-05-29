@@ -1,0 +1,10 @@
+.link{
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.active_link{
+    font-size: 30px;
+    margin: 0 20px;
+    color: red;
+}

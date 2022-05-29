@@ -9,11 +9,8 @@ const Flowers = () => {
 
 
   // modelbutton
-  const detailButton = product => {
-    addToDb(product.id);
-    const newFlower = [...orderFlower, product] 
-    console.log(newFlower);
-    setOrderFlower(newFlower)
+  const storeOrderItem = product => {
+     console.log(product);
   };
 
   return (
@@ -22,7 +19,7 @@ const Flowers = () => {
         <Flower
           flower={flower}
           key={flower.id}
-          detailButton={detailButton}
+          detailButton={storeOrderItem}
         ></Flower>
       ))}
     </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import FlowerOrders from '../FlowerOrder/FlowerOrder'
 
-const Flower = ({ flower, detailButton }) => {
+const Flower = ({ flower,  storeOrderItem }) => {
   const { name, img, price, id } = flower;
   const navigate = useNavigate();
   return (
@@ -19,12 +20,16 @@ const Flower = ({ flower, detailButton }) => {
         Details
       </button>
       <Link 
-      onClick={() => detailButton(flower)}
-        to={`/order/${id}`}
+      onClick={() => storeOrderItem(flower)}
+        to={`/store/${id}`}
         className="bg-green-600 text-dark-600 px-9 mx-2 py-1 border-2 rounded-md"
       >
         Order
       </Link>
+
+      <div>
+        <FlowerOrders order={flower}></FlowerOrders>
+      </div>
     </div>
   );
 };
